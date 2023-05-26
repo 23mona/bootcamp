@@ -5,4 +5,4 @@
   tasks:
     - name: Debug message 
       ansible.builtin.debug:
-        msg: A simple playbook
+        msg: The simplest playbook

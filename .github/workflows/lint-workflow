@@ -1,0 +1,33 @@
+name: Lint Ansible Playbooks
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Python Environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3-pip
+        pip install ansible-lint yamllint
+
+    - name: Run YAML Lint
+      run: |
+        find . -name "*.yml" -print0 | xargs -0 yamllint
+
+    - name: Run Ansible Lint
+      run: |
+        find . -name "*.yml" -print0 | xargs -0 ansible-lint

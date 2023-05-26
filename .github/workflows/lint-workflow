@@ -1,5 +1,5 @@
 name: Lint Ansible Playbooks
-
+run-name: testing lint
 on: [push]
 
 jobs:

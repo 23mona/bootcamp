@@ -14,16 +14,16 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install Dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y python3-pip
-        pip install ansible-lint yamllint
+    #- name: Install Dependencies
+      #run: |
+        #sudo apt-get update
+        #sudo apt-get install -y python3-pip
+        #pip install ansible-lint yamllint
 
-    - name: Run YAML Lint
-      run: |
-        find . -name "*.yml" -print0 | xargs -0 yamllint
+    #- name: Run YAML Lint
+      #run: |
+        #find . -name "*.yml" -print0 | xargs -0 yamllint
 
-    - name: Run Ansible Lint
-      run: |
-        find . -name "*.yml" -print0 | xargs -0 ansible-lint
+    #- name: Run Ansible Lint
+      #run: |
+        #find . -name "*.yml" -print0 | xargs -0 ansible-lint

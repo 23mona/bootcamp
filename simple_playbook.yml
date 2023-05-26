@@ -1,8 +1,7 @@
----
 - name: Test Playbook
   hosts: localhost
   gather_facts: false
   tasks:
-    - name: Debug message 
+    - name: Debug message
       ansible.builtin.debug:
         msg: "The simplest playbook"

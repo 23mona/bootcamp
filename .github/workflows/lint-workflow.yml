@@ -25,11 +25,3 @@ jobs:
 
     - name: Lint YAML files
       run: yamllint .
-
-    #- name: Run YAML Lint
-      #run: |
-        #find . -name "*.yml" -print0 | xargs -0 yamllint
-
-    #- name: Run Ansible Lint
-      #run: |
-        #find . -name "*.yml" -print0 | xargs -0 ansible-lint

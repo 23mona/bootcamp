@@ -1,12 +1,11 @@
 name: Lint Ansible Playbooks
 run-name: testing lint
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      echo "🎉 The job was automatically triggered by a push event."
+      - run: echo "🎉 The job was automatically triggered by a push event."
 
    # - name: Checkout repository
     #  uses: actions/checkout@v2

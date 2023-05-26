@@ -6,4 +6,5 @@
     - name: Debug message
       ansible.builtin.debug:
         msg: "The simplest playbook"
+        
 ...
